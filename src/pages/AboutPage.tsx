@@ -72,7 +72,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  Phoenix Solutions was founded in 2012 with a simple mission: to provide
+                  Phoenix Solutions was founded in 2025 with a simple mission: to provide
                   reliable, affordable computer repair services to the people of Udupi.
                   What started as a small repair shop has grown into a comprehensive IT
                   solutions provider serving homes, businesses, and schools.
