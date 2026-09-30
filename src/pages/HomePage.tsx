@@ -15,23 +15,7 @@ import {
   Wrench,
   Mail,
 } from 'lucide-react';
-
-const brands = [
-  { name: 'Dell', color: 'bg-blue-600' },
-  { name: 'HP', color: 'bg-sky-500' },
-  { name: 'Lenovo', color: 'bg-red-600' },
-  { name: 'ASUS', color: 'bg-gray-800' },
-  { name: 'Acer', color: 'bg-green-600' },
-  { name: 'Apple', color: 'bg-gray-700' },
-  { name: 'MSI', color: 'bg-red-700' },
-  { name: 'Samsung', color: 'bg-blue-700' },
-  { name: 'Toshiba', color: 'bg-red-500' },
-  { name: 'Sony', color: 'bg-gray-900' },
-  { name: 'Intel', color: 'bg-blue-500' },
-  { name: 'AMD', color: 'bg-red-600' },
-  { name: 'Hikvision', color: 'bg-orange-600' },
-  { name: 'D-Link', color: 'bg-gray-600' },
-];
+import BrandLogos from '../components/BrandLogos';
 
 const computerServices = [
   'Laptop Repair', 'Desktop Repair', 'Screen Replacement', 'Keyboard Replacement',
@@ -314,18 +298,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4">
-            {brands.map((brand, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
-              >
-                <span className={`text-white font-bold text-sm px-3 py-1.5 rounded ${brand.color}`}>
-                  {brand.name}
-                </span>
-              </div>
-            ))}
-          </div>
+          <BrandLogos />
         </div>
       </section>
 
