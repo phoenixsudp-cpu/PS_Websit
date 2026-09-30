@@ -279,8 +279,8 @@ export default function ServicesPage() {
                 Why Choose Phoenix Solutions?
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                With over 10 years of experience serving Udupi and surrounding areas,
-                we've earned a reputation for quality work and reliable service.
+                As a dedicated IT service provider in Udupi, we're committed to
+                delivering quality work and reliable service you can trust.
               </p>
 
               <div className="space-y-4">

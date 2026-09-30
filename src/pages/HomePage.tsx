@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import {
   ArrowRight,
   Monitor,
@@ -7,40 +6,15 @@ import {
   HardDrive,
   Shield,
   ShoppingCart,
-  Star,
   Phone,
   MessageCircle,
   Clock,
   MapPin,
   CheckCircle,
   Award,
-  Users,
   Wrench,
   Mail,
 } from 'lucide-react';
-
-const serviceCategories = [
-  {
-    icon: Monitor,
-    title: 'Computer Services',
-    items: ['Laptop Repair', 'Desktop Repair', 'Screen Replacement', 'Virus Removal', 'Data Recovery'],
-  },
-  {
-    icon: ShoppingCart,
-    title: 'Sales',
-    items: ['Laptops', 'Desktop Computers', 'Custom Gaming PCs', 'Printers', 'Accessories'],
-  },
-  {
-    icon: Camera,
-    title: 'Security Solutions',
-    items: ['CCTV Installation', 'IP Cameras', 'Access Control', 'Video Door Phones', 'Intercom'],
-  },
-  {
-    icon: Wifi,
-    title: 'Networking',
-    items: ['Office Networking', 'Wi-Fi Setup', 'LAN Cabling', 'Router Configuration', 'Server Setup'],
-  },
-];
 
 const brands = [
   { name: 'Dell', color: 'bg-blue-600' },
@@ -57,66 +31,6 @@ const brands = [
   { name: 'AMD', color: 'bg-red-600' },
   { name: 'Hikvision', color: 'bg-orange-600' },
   { name: 'D-Link', color: 'bg-gray-600' },
-];
-
-const portfolioItems = [
-  {
-    title: 'Laptop Repair',
-    description: 'Screen replacement and motherboard repair',
-    image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600',
-  },
-  {
-    title: 'Office Networking',
-    description: 'Complete LAN setup with 50+ nodes',
-    image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600',
-  },
-  {
-    title: 'CCTV Installation',
-    description: '16-channel security system with night vision',
-    image: 'https://images.pexels.com/photos/430216/pexels-photo-430216.jpeg?auto=compress&cs=tinysrgb&w=600',
-  },
-  {
-    title: 'Server Setup',
-    description: 'Enterprise file server configuration',
-    image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600',
-  },
-  {
-    title: 'Custom Gaming PC',
-    description: 'High-performance gaming rig build',
-    image: 'https://images.pexels.com/photos/7770017/pexels-photo-7770017.jpeg?auto=compress&cs=tinysrgb&w=600',
-  },
-  {
-    title: 'Security System',
-    description: 'Access control and biometric attendance',
-    image: 'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=600',
-  },
-];
-
-const testimonials = [
-  {
-    name: 'Rajesh Kumar',
-    role: 'Business Owner',
-    rating: 5,
-    review: 'Excellent service! They fixed my laptop in just 2 hours. Very professional and affordable prices.',
-  },
-  {
-    name: 'Priya Sharma',
-    role: 'School Administrator',
-    rating: 5,
-    review: 'Phoenix Solutions set up our entire computer lab. Great quality work and timely delivery.',
-  },
-  {
-    name: 'Mohammed Ansar',
-    role: 'Restaurant Owner',
-    rating: 5,
-    review: 'Installed CCTV cameras for my restaurant. Crystal clear quality and excellent support.',
-  },
-  {
-    name: 'Anita Rodrigues',
-    role: 'Home User',
-    rating: 5,
-    review: 'Recovered all my important files from a crashed hard drive. Highly recommend their data recovery service.',
-  },
 ];
 
 const computerServices = [
@@ -140,37 +54,6 @@ const networkingServices = [
   'Server Installation', 'Network Troubleshooting',
 ];
 
-function AnimatedCounter({ end, suffix = '' }: { end: number; suffix?: string }) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const duration = 2000;
-    const steps = 60;
-    const increment = end / steps;
-    const stepDuration = duration / steps;
-
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, stepDuration);
-
-    return () => clearInterval(timer);
-  }, [end]);
-
-  return (
-    <span>
-      {count}
-      {suffix}
-    </span>
-  );
-}
-
 export default function HomePage() {
   return (
     <div className="bg-white">
@@ -189,7 +72,7 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6 border border-blue-500/30">
               <Award className="h-4 w-4 mr-2 text-blue-400" />
-              Trusted IT Partner in Udupi
+              Your Trusted IT Partner in Udupi
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -247,38 +130,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-                <AnimatedCounter end={10} suffix="+" />
-              </div>
-              <div className="text-gray-600">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-                <AnimatedCounter end={5000} suffix="+" />
-              </div>
-              <div className="text-gray-600">Happy Customers</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-                <AnimatedCounter end={14} />
-              </div>
-              <div className="text-gray-600">Brands Supported</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-                <AnimatedCounter end={99} suffix="%" />
-              </div>
-              <div className="text-gray-600">Satisfaction Rate</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -288,15 +139,15 @@ export default function HomePage() {
                 About Phoenix Solutions
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Phoenix Solutions is a professional computer sales and service company providing
-                complete IT solutions for homes, businesses, schools, and offices in Udupi and
-                surrounding areas.
+                Phoenix Solutions is a newly established computer sales and service shop
+                providing complete IT solutions for homes, businesses, schools, and offices
+                in Udupi and surrounding areas.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                With over a decade of experience, our skilled technicians deliver reliable
-                computer repairs, custom PC builds, networking solutions, and professional
-                security system installations. We're committed to providing quality service
-                at competitive prices.
+                Our skilled technicians are dedicated to delivering reliable computer
+                repairs, custom PC builds, networking solutions, and professional security
+                system installations. We're committed to providing quality service at
+                competitive prices.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
@@ -329,17 +180,6 @@ export default function HomePage() {
                   alt="Computer service"
                   className="rounded-2xl shadow-xl w-full object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-blue-100 rounded-xl">
-                    <Users className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">5000+</div>
-                    <div className="text-gray-600">Satisfied Customers</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -470,7 +310,7 @@ export default function HomePage() {
               Brands We Support
             </h2>
             <p className="text-lg text-gray-600">
-              Authorized service and repair for all major computer and security brands.
+              Service and repair for all major computer and security brands.
             </p>
           </div>
 
@@ -483,79 +323,6 @@ export default function HomePage() {
                 <span className={`text-white font-bold text-sm px-3 py-1.5 rounded ${brand.color}`}>
                   {brand.name}
                 </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Work
-            </h2>
-            <p className="text-lg text-gray-600">
-              See some of our recent projects in computer repair, networking, and security installations.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolioItems.map((item, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl bg-gray-100"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
-                  <p className="text-gray-300 text-sm">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Customer Reviews
-            </h2>
-            <p className="text-lg text-gray-600">
-              Don't just take our word for it - hear from our satisfied customers.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-2xl p-6 shadow-sm"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4 leading-relaxed">{testimonial.review}</p>
-                <div className="flex items-center space-x-3">
-                  <div className="h-10 w-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-semibold">
-                    {testimonial.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-gray-500">{testimonial.role}</div>
-                  </div>
-                </div>
               </div>
             ))}
           </div>

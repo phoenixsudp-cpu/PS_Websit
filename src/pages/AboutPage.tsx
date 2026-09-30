@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom';
 import {
-  ArrowRight,
   Target,
   Eye,
   Heart,
@@ -37,12 +35,7 @@ const values = [
   },
 ];
 
-const milestones = [
-  { year: '2012', title: 'Founded', desc: 'Started as a small computer repair shop in Udupi.' },
-  { year: '2015', title: 'Security Services', desc: 'Added CCTV and security system installation.' },
-  { year: '2019', title: 'Networking', desc: 'Expanded to networking and IT support services.' },
-  { year: '2024', title: 'Growing Strong', desc: 'Serving 5000+ satisfied customers across Udupi.' },
-];
+
 
 export default function AboutPage() {
   return (
@@ -57,7 +50,7 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Phoenix Solutions</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Your trusted IT partner in Udupi, providing reliable computer sales,
-            service, and security solutions for over a decade.
+            service, and security solutions for homes and businesses.
           </p>
         </div>
       </section>
@@ -72,37 +65,21 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  Phoenix Solutions was founded in 2025 with a simple mission: to provide
-                  reliable, affordable computer repair services to the people of Udupi.
-                  What started as a small repair shop has grown into a comprehensive IT
-                  solutions provider serving homes, businesses, and schools.
+                  Phoenix Solutions is a newly established computer sales and service shop
+                  in Udupi, founded with a simple mission: to provide reliable, affordable
+                  computer repair services to the people of Udupi.
                 </p>
                 <p>
-                  Over the years, we've expanded our services to include computer sales,
+                  We offer a comprehensive range of IT solutions including computer sales,
                   custom PC builds, networking solutions, and professional security system
-                  installations. Today, we serve customers across Udupi district with
-                  dedication and expertise.
+                  installations. We serve homes, businesses, and schools across Udupi
+                  district with dedication and expertise.
                 </p>
                 <p>
                   Our name, Phoenix, represents our commitment to breathing new life into
                   your technology. Whether it's reviving a crashed laptop or installing a
                   security system, we're here to help your technology work at its best.
                 </p>
-              </div>
-
-              <div className="mt-8 grid grid-cols-3 gap-4">
-                <div className="text-center p-4 bg-blue-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600">10+</div>
-                  <div className="text-sm text-gray-600">Years</div>
-                </div>
-                <div className="text-center p-4 bg-blue-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600">5000+</div>
-                  <div className="text-sm text-gray-600">Customers</div>
-                </div>
-                <div className="text-center p-4 bg-blue-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600">14</div>
-                  <div className="text-sm text-gray-600">Brands</div>
-                </div>
               </div>
             </div>
             <div className="relative">
@@ -175,35 +152,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Journey
-            </h2>
-            <p className="text-lg text-gray-600">
-              Key milestones in our growth as Udupi's trusted IT partner.
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="flex items-start mb-8 last:mb-0">
-                <div className="flex-shrink-0 w-20 text-right pr-6">
-                  <span className="text-lg font-bold text-blue-600">{milestone.year}</span>
-                </div>
-                <div className="flex-shrink-0 w-4 h-4 bg-blue-600 rounded-full mt-1.5" />
-                <div className="flex-grow pl-6 pb-8 border-l-2 border-blue-200">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{milestone.title}</h3>
-                  <p className="text-gray-600">{milestone.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +166,7 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Award, title: '10+ Years Experience', desc: 'A decade of serving Udupi with reliable IT solutions.' },
+              { icon: Award, title: 'Dedicated Service', desc: 'Committed to serving Udupi with reliable IT solutions.' },
               { icon: Wrench, title: 'Expert Technicians', desc: 'Skilled in all major brands and technologies.' },
               { icon: Clock, title: 'Quick Turnaround', desc: 'Most repairs completed within 24-48 hours.' },
               { icon: Shield, title: 'Genuine Parts', desc: 'Quality components for lasting repairs.' },
