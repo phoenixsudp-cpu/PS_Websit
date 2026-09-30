@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Clock, MessageCircle, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
+import logo from '../Phoenix_Solutions_logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <div>
             <img
-              src="/Phoenix_Solutions_logo.png"
+              src={logo}
               alt="Phoenix Solutions"
               className="h-16 w-auto mb-6"
             />

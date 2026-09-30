@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
+import logo from '../Phoenix_Solutions_logo.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="/Phoenix_Solutions_logo.png"
+              src={logo}
               alt="Phoenix Solutions"
               className="h-14 w-auto"
             />
