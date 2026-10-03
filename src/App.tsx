@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <BrowserRouter basename="/PS_Websit">
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
