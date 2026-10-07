@@ -7,6 +7,9 @@ import {
   Send,
   CheckCircle,
   MessageCircle,
+  Facebook,
+  Instagram,
+  Globe,
 } from 'lucide-react';
 
 export default function ContactPage() {
@@ -43,6 +46,28 @@ export default function ContactPage() {
     'Virus Removal',
     'Other',
   ];
+
+  const socialLinks = [
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/profile.php?id=61578534727295#', // Replace with your actual Facebook URL
+      icon: Facebook,
+      color: 'hover:text-blue-600',
+    },
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/phoenixsudp/', // Replace with your actual Instagram URL
+      icon: Instagram,
+      color: 'hover:text-pink-600',
+    },
+    {
+      name: 'WhatsApp',
+      url: 'https://wa.me/916361437694',
+      icon: MessageCircle,
+      color: 'hover:text-green-600',
+    },
+  ];
+
 
   return (
     <div className="bg-white">
