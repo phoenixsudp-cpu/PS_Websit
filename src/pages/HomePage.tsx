@@ -22,9 +22,9 @@ const brands = [
   { name: 'Lenovo', color: 'bg-red-600' },
   { name: 'ASUS', color: 'bg-gray-800' },
   { name: 'Acer', color: 'bg-green-600' },
-  { name: 'Prama', color: 'bg-red-700' },
+  { name: 'Prama', color: 'bg-blue-700' },
   { name: 'MSI', color: 'bg-red-700' },
-  { name: 'CP Plus', color: 'bg-blue-700' },
+  { name: 'CP Plus', color: 'bg-gray-600' },
   { name: 'Toshiba', color: 'bg-red-500' },
   { name: 'Sony', color: 'bg-gray-900' },
   { name: 'Intel', color: 'bg-blue-500' },
@@ -81,7 +81,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-xl text-gray-300 mb-4 font-medium">
-              Sales • Service • Networking • CCTV • Annual Maintenance • IT Support
+              Sales • Service • Networking • CCTV • IT Support
             </p>
 
             <p className="text-lg text-gray-400 mb-10 max-w-2xl">
