@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <div>
             <img
-              src={logo}
+               src={logo}
               alt="Phoenix Solutions"
               className="h-16 w-auto mb-6"
             />
@@ -18,10 +18,10 @@ export default function Footer() {
               Complete computer sales, service, and security solutions for homes, businesses, schools, and offices in Udupi.
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="p-2.5 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61578534727295#" className="p-2.5 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2.5 bg-gray-800 rounded-lg hover:bg-pink-600 transition-colors">
+              <a href="https://www.instagram.com/phoenixsudp/" className="p-2.5 bg-gray-800 rounded-lg hover:bg-pink-600 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="p-2.5 bg-gray-800 rounded-lg hover:bg-red-600 transition-colors">
